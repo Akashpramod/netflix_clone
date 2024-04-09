@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+import 'package:netflix_clone/core/constant.dart';
+
+class AppBarWidget extends StatelessWidget {
+   AppBarWidget({super.key, required this.title});
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        kwidth,
+        Text(title, style:const TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        const Spacer(),
+        Icon(Icons.cast,
+        color: Colors.white,),
+        SizedBox(width: 10,),
+        kwidth,
+        Container(
+          width: 30,
+          height: 30,
+          child: Image.network('https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png',fit: BoxFit.cover,),
+
+        ),
+        kwidth,
+      ],
+    );
+  }
+}
